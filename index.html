@@ -9,6 +9,8 @@ header{background:black;color:white;padding:20px;}
 button{padding:15px 25px;margin:10px;background:black;color:white;border:none;border-radius:8px;}
 .section{padding:40px;}
 .menu{background:white;padding:20px;margin:20px auto;max-width:500px;border-radius:10px;}
+form{background:white;padding:20px;margin:20px auto;max-width:500px;border-radius:10px;}
+input, textarea{width:90%;padding:10px;margin:10px;border-radius:5px;border:1px solid #ccc;}
 </style>
 </head>
 <body>
@@ -22,7 +24,6 @@ button{padding:15px 25px;margin:10px;background:black;color:white;border:none;bo
 <div class="section">
 <a href="https://instagram.com/thesweetkitchenis"><button>Order via Instagram</button></a>
 <a href="https://www.facebook.com/share/16pxDonsms/?mibextid=wwXIfr"><button>Order via Messenger</button></a>
-<a href="https://form.jotform.com/232697114522354"><button>Order Form</button></a>
 </div>
 
 <div class="menu">
@@ -43,6 +44,20 @@ button{padding:15px 25px;margin:10px;background:black;color:white;border:none;bo
 <h3>Bento Cake Box</h3>
 <p>4 inch + 5 cupcakes – 8.500 ISK</p>
 </div>
+
+<h2>Order Form</h2>
+
+<form name="cake-order" method="POST" data-netlify="true">
+<input type="hidden" name="form-name" value="cake-order">
+
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="email" name="email" placeholder="Email Address" required>
+<input type="tel" name="phone" placeholder="Phone Number">
+
+<textarea name="order-details" placeholder="Describe your cake (size, flavour, date needed)" rows="4" required></textarea>
+
+<button type="submit">Submit Order</button>
+</form>
 
 <footer style="background:black;color:white;padding:20px;">
 <p>Reykjanesbær, Iceland</p>
