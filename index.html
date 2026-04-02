@@ -124,22 +124,75 @@ margin-top:40px;
 <script>
 function switchLang(lang){
 
-if(lang==="is"){
-document.getElementById("hero-title").innerText="Velkomin í The Sweet Kitchen";
-document.getElementById("hero-sub").innerText="Sérsniðnar kökur í Reykjanesbæ";
+const content = {
+en: {
+heroTitle: "Welcome to The Sweet Kitchen",
+heroSub: "Custom cakes in Reykjanesbær, Iceland",
+menuTitle: "MENU & PRICES",
+cakes: "CAKES",
+cupcakes: "CUPCAKES",
+bento: "BENTO CAKE BOX",
+flavors: "CAKE FLAVORS",
+fillings: "CAKE FILLINGS",
+otherFillings: "OTHER FILLINGS (+10% of cake cost)",
+frosting: "CAKE FROSTING",
+toppings: "TOPPINGS (500 – 2.000 ISK)",
+flowers: "FRESH FLOWERS (3.000 – 4.000 ISK)",
+toppers: "GENERIC TOPPERS",
+specialToppers: "SPECIAL TOPPERS & CROWNS",
+order: "Order Form",
+note1: "Please let us know if you have any dietary restrictions.",
+note2: "Lactose free option available.",
+note3: "Orders must be placed at least 5 days in advance.",
+note4: "Last minute orders are subject to a 1.500 ISK rush fee."
+},
 
-document.getElementById("menu-title").innerText="MATSEÐILL & VERÐ";
-document.getElementById("order-title").innerText="Panta köku";
-
+is: {
+heroTitle: "Velkomin í The Sweet Kitchen",
+heroSub: "Sérsniðnar kökur í Reykjanesbæ",
+menuTitle: "MATSEÐILL & VERÐ",
+cakes: "KÖKUR",
+cupcakes: "BOLLAKÖKUR",
+bento: "BENTO KÖKU BOX",
+flavors: "BRAGÐTEGUNDIR",
+fillings: "FYLLINGAR",
+otherFillings: "AUKA FYLLINGAR (+10%)",
+frosting: "KREM",
+toppings: "ÁLEGG (500 – 2.000 ISK)",
+flowers: "FERSK BLÓM (3.000 – 4.000 ISK)",
+toppers: "ALMENNIR TOPPAR",
+specialToppers: "SÉRSTAKIR TOPPAR & KÓRÓNUR",
+order: "Panta köku",
+note1: "Vinsamlegast látið okkur vita um ofnæmi eða óþol.",
+note2: "Laktósafrír valkostur í boði.",
+note3: "Pantanir þurfa að berast með minnst 5 daga fyrirvara.",
+note4: "Flýtipantanir kosta 1.500 ISK aukalega."
 }
+};
 
-else{
-document.getElementById("hero-title").innerText="Welcome to The Sweet Kitchen";
-document.getElementById("hero-sub").innerText="Custom cakes in Reykjanesbær, Iceland";
+const t = content[lang];
 
-document.getElementById("menu-title").innerText="MENU & PRICES";
-document.getElementById("order-title").innerText="Order Form";
-}
+document.getElementById("hero-title").innerText = t.heroTitle;
+document.getElementById("hero-sub").innerText = t.heroSub;
+document.getElementById("menu-title").innerText = t.menuTitle;
+document.getElementById("cakes-title").innerText = t.cakes;
+document.getElementById("cupcakes-title").innerText = t.cupcakes;
+document.getElementById("bento-title").innerText = t.bento;
+document.getElementById("flavors-title").innerText = t.flavors;
+document.getElementById("fillings-title").innerText = t.fillings;
+document.getElementById("otherfillings-title").innerText = t.otherFillings;
+document.getElementById("frosting-title").innerText = t.frosting;
+document.getElementById("toppings-title").innerText = t.toppings;
+document.getElementById("flowers-title").innerText = t.flowers;
+document.getElementById("toppers-title").innerText = t.toppers;
+document.getElementById("specialtoppers-title").innerText = t.specialToppers;
+document.getElementById("order-title").innerText = t.order;
+
+document.getElementById("note1").innerText = t.note1;
+document.getElementById("note2").innerText = t.note2;
+document.getElementById("note3").innerText = t.note3;
+document.getElementById("note4").innerText = t.note4;
+
 }
 </script>
 
@@ -172,7 +225,7 @@ document.getElementById("order-title").innerText="Order Form";
 <div class="menu">
 <h2 id="menu-title">MENU & PRICES</h2>
 
-<h3>CAKES</h3>
+<h3 id="cakes-title">CAKES</h3>
 <p>4” 2 layers – 5.000 ISK</p>
 <p>4” 3 layers – 7.000 ISK</p>
 <p>6” 3 layers – 10.000 ISK</p>
@@ -181,23 +234,23 @@ document.getElementById("order-title").innerText="Order Form";
 <p>10” 2 layers – 15.000 ISK</p>
 <p>10” 4 layers – 26.000 ISK</p>
 
-<h3>CUPCAKES</h3>
+<h3 id="cupcakes-title">CUPCAKES</h3>
 <p>Box of 6 – 4.000 ISK</p>
 <p>Box of 12 – 7.000 ISK</p>
 
-<h3>BENTO CAKE BOX</h3>
+<h3 id="bento-title">BENTO CAKE BOX</h3>
 <p>4” 2 layers cake + 5 cupcakes – 8.500 ISK</p>
 
-<h3>CAKE FLAVORS</h3>
+<h3 id="flavors-title">CAKE FLAVORS</h3>
 <p>Vanilla • Strawberry • Chocolate • Oreo Cookie & Cream • Lotus Biscoff • Red Velvet</p>
 
-<h3>CAKE FILLINGS</h3>
+<h3 id="fillings-title">CAKE FILLINGS</h3>
 <p>Strawberry Sauce • Chocolate Ganache • Vanilla Custard • Chocolate Custard • Blueberry Sauce • Italian Meringue • Cream Cheese</p>
 
-<h3>OTHER FILLINGS (+10% of cake cost)</h3>
+<h3 id="otherfillings-title">OTHER FILLINGS (+10% of cake cost)</h3>
 <p>Nutella Mousse • Lotus Biscoff Mousse • Peanut Butter • Oreo & Cream • Salted Caramel Sauce • Caramel Sauce</p>
 
-<h3>CAKE FROSTING</h3>
+<h3 id="frosting-title">CAKE FROSTING</h3>
 
 <div style="margin-top:10px;">
 <p><strong>Regular:</strong></p>
@@ -213,28 +266,28 @@ document.getElementById("order-title").innerText="Order Form";
 Chocolate Ganache • White Chocolate Ganache • Salted Caramel Ganache • Strawberry White Chocolate Ganache • Whipped Cream  • Cream Cheese
 </p>
 </div>
-<h3>TOPPINGS (500 – 2.000 ISK)</h3>
+<h3 id="toppings-title">TOPPINGS (500 – 2.000 ISK)</h3>
 <p>Fruit • Cookies • Chocolate • Artificial Flowers</p>
 
-<h3>FRESH FLOWERS (3.000 – 4.000 ISK)</h3>
+<h3 id="flowers-title">FRESH FLOWERS (3.000 – 4.000 ISK)</h3>
 
-<h3>GENERIC TOPPERS</h3>
+<h3 id="toppers-title">GENERIC TOPPERS</h3>
 <p>Free based on availability (One per customer)</p>
 
-<h3>SPECIAL TOPPERS & CROWNS</h3>
+<h3 id="specialtoppers-title">SPECIAL TOPPERS & CROWNS</h3>
 <p>From 1.500 ISK</p>
 <p><em>(Please order at least 7 business days ahead)</em></p>
 
 <br>
 
-<p><strong>Please let us know if you have any dietary restrictions.</strong></p>
-<p>Lactose free option available.</p>
+<p id="note1">Please let us know if you have any dietary restrictions.</p>
+<p id="note2">Lactose free and Vegan Adjustments available.</p>
 
 <br>
 
 <p><strong>Important:</strong></p>
-<p>Orders must be placed at least 5 days in advance to ensure availability.</p>
-<p>Last minute orders are subject to a 1.500 ISK rush fee.</p>
+<p id="note3">Please Order at least 5 days in advance.</p>
+<p id="note4">Last minute orders are subject to a 1.500 ISK rush fee.</p>
 
 </div>
 
