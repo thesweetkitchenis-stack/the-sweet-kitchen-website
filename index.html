@@ -4,23 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The Sweet Kitchen | Sæta eldhúsið</title>
+<title>The Sweet Kitchen | Custom Cakes in Reykjanesbær</title>
+<meta name="description" content="The Sweet Kitchen (Sæta eldhúsið) - Custom cakes, cupcakes and bento cakes in Reykjanesbær, Iceland. Order via Instagram or Messenger. 250+ happy customers.">
 
+<meta name="keywords" content="cakes in Iceland, Reykjanesbær bakery, custom cakes Iceland, cupcakes Iceland, birthday cakes Reykjanesbær">
+
+<meta property="og:title" content="The Sweet Kitchen | Custom Cakes Iceland">
+<meta property="og:description" content="Order beautiful custom cakes in Reykjanesbær. 250+ happy customers.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="YOUR-LOGO-IMAGE-LINK-HERE">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
-background:linear-gradient(to bottom,#ffe4ec,#ffffff);
+background:linear-gradient(to bottom,#ffd6e7,#fff);
 color:#333;
+text-align:center;
 }
 
 header{
 background:black;
 color:white;
-padding:20px;
-text-align:center;
+padding:30px;
 }
 
 h1{
@@ -28,64 +35,87 @@ color:#ff69b4;
 margin:0;
 }
 
+nav{
+margin-top:15px;
+}
+
+nav button{
+margin:5px;
+padding:10px 20px;
+border:none;
+background:#ff69b4;
+color:white;
+border-radius:20px;
+cursor:pointer;
+}
+
 .hero{
-text-align:center;
 padding:60px 20px;
+}
+
+.hero h2{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.buttons a{
+text-decoration:none;
 }
 
 .buttons button{
 margin:10px;
 padding:15px 30px;
 border:none;
-border-radius:30px;
 background:black;
 color:white;
+border-radius:30px;
 font-size:16px;
+cursor:pointer;
 }
 
 .section{
 padding:40px 20px;
-text-align:center;
 }
 
-.menu, .form-box{
+.menu{
 background:white;
-max-width:700px;
+max-width:600px;
 margin:20px auto;
 padding:30px;
 border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
-.gallery img{
-width:280px;
-border-radius:15px;
+form{
+background:white;
+max-width:600px;
+margin:30px auto;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+input,textarea{
+width:90%;
+padding:12px;
 margin:10px;
+border-radius:10px;
+border:1px solid #ccc;
+font-family:'Poppins',sans-serif;
 }
 
-.highlight{
-background:#ffe4ec;
-padding:15px;
-border-radius:12px;
-margin-top:15px;
-}
-
-.floating-btn{
-position:fixed;
-bottom:20px;
-right:20px;
+form button{
 background:#ff69b4;
 color:white;
-padding:15px 20px;
-border-radius:50px;
-font-weight:bold;
-box-shadow:0 5px 20px rgba(0,0,0,0.3);
+padding:15px 30px;
+border:none;
+border-radius:30px;
+cursor:pointer;
 }
 
 footer{
 background:black;
 color:white;
-text-align:center;
 padding:20px;
 margin-top:40px;
 }
@@ -93,73 +123,15 @@ margin-top:40px;
 
 <script>
 function switchLang(lang){
-localStorage.setItem("lang", lang);
-
-const t = {
-en:{
-hero:"Custom cakes in Reykjanesbær",
-order:"Order Now",
-menu:"MENU & PRICES"
-},
-is:{
-hero:"Sérsniðnar kökur í Reykjanesbæ",
-order:"Panta núna",
-menu:"MATSEÐILL & VERÐ"
+if(lang==="is"){
+document.getElementById("hero-title").innerText="Velkomin í The Sweet Kitchen";
+document.getElementById("hero-sub").innerText="Sérsniðnar kökur í Reykjanesbæ";
 }
-}[lang];
-
-document.getElementById("hero-text").innerText=t.hero;
-document.getElementById("menu-title").innerText=t.menu;
-document.getElementById("order-btn").innerText=t.order;
+else{
+document.getElementById("hero-title").innerText="Welcome to The Sweet Kitchen";
+document.getElementById("hero-sub").innerText="Custom cakes in Reykjanesbær, Iceland";
 }
-
-window.onload=function(){
-let lang=localStorage.getItem("lang")|| (navigator.language.startsWith("is")?"is":"en");
-switchLang(lang);
 }
-</script>
-
-</head>
-
-<body>
-
-<header>
-<h1>The Sweet Kitchen</h1>
-<p>Sæta eldhúsið</p>
-
-<button onclick="switchLang('en')">🇬🇧</button>
-<button onclick="switchLang('is')">🇮🇸</button>
-</header>
-
-<div class="hero">
-<h2 id="hero-text">Custom cakes in Reykjanesbær</h2>
-
-<div class="buttons">
-<a href="https://instagram.com/thesweetkitchenis">
-<button>Instagram</button>
-</a>
-
-<a href="https://www.facebook.com/share/16pxDonsms/?mibextid=wwXIfr">
-<button>Messenger</button>
-</a>
-</div>
-</div>
-
-<div class="section">
-<h2>Our Cakes</h2>
-
-<div class="gallery">
-<img src="cake1.jpg">
-<img src="cake2.jpg">
-<img src="cake3.jpg">
-</div>
-</div>
-
-<div class="menu">
-<h2 id="menu-title">MENU & PRICES</h2>
-
-<p><strong>CAKES</strong></p>
-
 </script>
 
 </head>
@@ -189,9 +161,9 @@ switchLang(lang);
 
 <div class="section">
 <div class="menu">
-<h2 id="menu-title">MENU & PRICES</h2>
+<h2>Menu & Prices</h2>
 
-<h3 id="cakes-title">CAKES</h3>
+<h3>CAKES</h3>
 <p>4” 2 layers – 5.000 ISK</p>
 <p>4” 3 layers – 7.000 ISK</p>
 <p>6” 3 layers – 10.000 ISK</p>
@@ -200,23 +172,24 @@ switchLang(lang);
 <p>10” 2 layers – 15.000 ISK</p>
 <p>10” 4 layers – 26.000 ISK</p>
 
-<h3 id="cupcakes-title">CUPCAKES</h3>
+<h3>CUPCAKES</h3>
 <p>Box of 6 – 4.000 ISK</p>
 <p>Box of 12 – 7.000 ISK</p>
 
-<h3 id="bento-title">BENTO CAKE BOX</h3>
+<h3>BENTO CAKE BOX</h3>
 <p>4” 2 layers cake + 5 cupcakes – 8.500 ISK</p>
 
-<h3 id="flavors-title">CAKE FLAVORS</h3>
+<h3>CAKE FLAVORS</h3>
 <p>Vanilla • Strawberry • Chocolate • Oreo Cookie & Cream • Lotus Biscoff • Red Velvet</p>
 
-<h3 id="fillings-title">CAKE FILLINGS</h3>
+<h3>CAKE FILLINGS</h3>
 <p>Strawberry Sauce • Chocolate Ganache • Vanilla Custard • Chocolate Custard • Blueberry Sauce • Italian Meringue • Cream Cheese</p>
 
-<h3 id="otherfillings-title">OTHER FILLINGS (+10% of cake cost)</h3>
+<h3>OTHER FILLINGS (+10% of cake cost)</h3>
 <p>Nutella Mousse • Lotus Biscoff Mousse • Peanut Butter • Oreo & Cream • Salted Caramel Sauce • Caramel Sauce</p>
 
-<h3 id="frosting-title">CAKE FROSTING</h3>
+<h3>CAKE FROSTING</h3>
+<p>Italian Meringue Buttercream • American Buttercream • Chocolate Ganache • White Chocolate Ganache• Salted Caramel Ganache • Whipped Cream • Cream Cheese</p>
 
 <div style="margin-top:10px;">
 <p><strong>Regular:</strong></p>
@@ -232,55 +205,44 @@ switchLang(lang);
 Chocolate Ganache • White Chocolate Ganache • Salted Caramel Ganache • Strawberry White Chocolate Ganache • Whipped Cream  • Cream Cheese
 </p>
 </div>
-<h3 id="toppings-title">TOPPINGS (500 – 2.000 ISK)</h3>
+<h3>TOPPINGS (500 – 2.000 ISK)</h3>
 <p>Fruit • Cookies • Chocolate • Artificial Flowers</p>
 
-<h3 id="flowers-title">FRESH FLOWERS (3.000 – 4.000 ISK)</h3>
+<h3>FRESH FLOWERS (3.000 – 4.000 ISK)</h3>
 
-<h3 id="toppers-title">GENERIC TOPPERS</h3>
+<h3>GENERIC TOPPERS</h3>
 <p>Free based on availability (One per customer)</p>
 
-<h3 id="specialtoppers-title">SPECIAL TOPPERS & CROWNS</h3>
+<h3>SPECIAL TOPPERS & CROWNS</h3>
 <p>From 1.500 ISK</p>
 <p><em>(Please order at least 7 business days ahead)</em></p>
 
 <br>
 
-<p id="note1">Please let us know if you have any dietary restrictions.</p>
-<p id="note2">Lactose free and Vegan Adjustments available.</p>
+<p><strong>Please let us know if you have any dietary restrictions.</strong></p>
+<p>Lactose free option available.</p>
 
 <br>
 
 <p><strong>Important:</strong></p>
-<p id="note3">Please Order at least 5 days in advance.</p>
-<p id="note4">Last minute orders are subject to a 1.500 ISK rush fee.</p>
+<p>Orders must be placed at least 5 days in advance to ensure availability.</p>
+<p>Last minute orders are subject to a 1.500 ISK rush fee.</p>
 
 </div>
 
-<div class="section">
-<h2>Our Cakes</h2>
-
-<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:15px;max-width:900px;margin:auto;">
-
-<img src="cake1.jpg" style="width:280px;border-radius:15px;">
-<img src="cake2.jpg" style="width:280px;border-radius:15px;">
-<img src="cake3.jpg" style="width:280px;border-radius:15px;">
-
-</div>
-</div>
-
-<h2 id="order-title">Order Form</h2>
+<h2>Order Form</h2>
 
 <form name="cake-order" method="POST" data-netlify="true">
 <input type="hidden" name="form-name" value="cake-order">
 
-<input id="name" type="text" name="name" placeholder="Full Name" required>
-<input id="email" type="email" name="email" placeholder="Email Address" required>
-<input id="phone" type="tel" name="phone" placeholder="Phone Number">
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="email" name="email" placeholder="Email Address" required>
+<input type="tel" name="phone" placeholder="Phone Number">
 
-<textarea id="details" name="order-details" placeholder="Describe your cake: Size, Flavor, Frosting, Theme, Toppings, Date and Time Needed" required></textarea>
+<textarea name="order-details" placeholder="Describe your cake (Size, Flavor, Filling, Frosting, Color/Theme, Toppings & date needed)" rows="4" required></textarea>
 
-<button id="submit-btn" type="submit">Submit Order</button>
+<button type="submit">Submit Order</button>
+</form>
 
 <footer>
 <p>Reykjanesbær, Iceland</p>
@@ -288,4 +250,3 @@ Chocolate Ganache • White Chocolate Ganache • Salted Caramel Ganache • Str
 </footer>
 
 </body>
-</html>
