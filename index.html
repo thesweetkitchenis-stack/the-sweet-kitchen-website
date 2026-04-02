@@ -123,13 +123,22 @@ margin-top:40px;
 
 <script>
 function switchLang(lang){
+
 if(lang==="is"){
 document.getElementById("hero-title").innerText="Velkomin í The Sweet Kitchen";
 document.getElementById("hero-sub").innerText="Sérsniðnar kökur í Reykjanesbæ";
+
+document.getElementById("menu-title").innerText="MATSEÐILL & VERÐ";
+document.getElementById("order-title").innerText="Panta köku";
+
 }
+
 else{
 document.getElementById("hero-title").innerText="Welcome to The Sweet Kitchen";
 document.getElementById("hero-sub").innerText="Custom cakes in Reykjanesbær, Iceland";
+
+document.getElementById("menu-title").innerText="MENU & PRICES";
+document.getElementById("order-title").innerText="Order Form";
 }
 }
 </script>
@@ -161,7 +170,7 @@ document.getElementById("hero-sub").innerText="Custom cakes in Reykjanesbær, Ic
 
 <div class="section">
 <div class="menu">
-<h2>Menu & Prices</h2>
+<h2 id="menu-title">MENU & PRICES</h2>
 
 <h3>CAKES</h3>
 <p>4” 2 layers – 5.000 ISK</p>
@@ -241,7 +250,7 @@ Chocolate Ganache • White Chocolate Ganache • Salted Caramel Ganache • Str
 </div>
 </div>
 
-<h2>Order Form</h2>
+<h2 id="order-title">Order Form</h2>
 
 <form name="cake-order" method="POST" data-netlify="true">
 <input type="hidden" name="form-name" value="cake-order">
